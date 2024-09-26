@@ -1,3 +1,4 @@
+
 body {
   font-family: "Open Sans";
   font-weight: 400;
@@ -27,11 +28,14 @@ a {
 }
 .nav-heading {
   box-sizing: border-box;
-  display: inline-block;
+  display: flex;
+
   width: 100%;
   background-color: #fff0ed;
   text-align: start;
   padding: 0.8rem;
+  height: 100px;
+
 }
 .nav-heading__logo{
   box-sizing: border-box;
@@ -50,8 +54,8 @@ a {
   padding-left: 1.88rem;
 }
 .nitro {
-  display: inline;
-  margin: 0%;
+  margin-top: 0rem;
+  margin-bottom: 20px;
 }
 #shop-link a {
   color: #5bacc3;
