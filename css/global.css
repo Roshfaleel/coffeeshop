@@ -26,37 +26,44 @@ a {
   text-decoration: none;
   color: #393939;
 }
-.nav-heading {
+.navbar {
   box-sizing: border-box;
+  margin: 0;
+  height: 90px;
   display: flex;
-
-  width: 100%;
-  background-color: #fff0ed;
-  text-align: start;
+  justify-content: space-between;
+  align-items: center;
   padding: 0.8rem;
-  height: 100px;
+  background-color: #fff0ed;
+}
 
+.navbar__logo {
+  display: flex;
+  align-items: center;
 }
-.nav-heading__logo{
-  box-sizing: border-box;
-  display: inline-block;
-  width: 3.13rem;
+
+.navbar__logo img {
+  height: 50px;
+  margin-right: 10px;
 }
-.nav-heading__link{
-  box-sizing: border-box;
-  display: inline-block;
+.navbar__logo h2{
+  margin: 0;
+}
+
+.navbar__links {
+  display: flex;
+  padding-top: 25px;
   font-size: 1.31rem;
   font-weight: 400;
+}
+.navbar__links ul {
+  margin: 0 15px;
+}
+.navbar__links li{
+ display: inline-block;
+ padding-left: 1.88rem;
+}
 
-}
-.nav-heading li {
-  display: inline-block;
-  padding-left: 1.88rem;
-}
-.nitro {
-  margin-top: 0rem;
-  margin-bottom: 20px;
-}
-#shop-link a {
+#shop-link a{
   color: #5bacc3;
 }
