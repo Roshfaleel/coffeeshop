@@ -4,16 +4,26 @@
   box-sizing: border-box;
 }
 
-.button {
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #5bacc3;
   color: white;
   border: none;
   font-size: 1.31rem;
   font-weight: 300;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.63rem;
-  padding-bottom: 0.63rem;
+  width: 180px;
+  padding: 0;
+  margin-top: 50px;
+}
+.button--feature {
+  border: 0.15rem solid black;
+  width: 180px;
+  padding: 15px;
+  position: relative;
+  top: -0.3rem;
+  right: 0.3rem;
 }
 
 /* banner */
@@ -45,8 +55,12 @@
 
 /* cards */
 .products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: 110vh;
+  height: 130vh;
   background-color: #f7f7f7;
   text-align: center;
   padding: 2.5rem;
@@ -59,7 +73,8 @@
 .products-section {
   margin-bottom: 0rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  gap: 50px;
 }
 .products-section__card {
   background-color: white;
@@ -73,7 +88,6 @@
   height: 17.5rem;
   background-color: white;
   padding: 1.25rem;
-
 }
 .product-section__content {
   display: flex;
@@ -117,58 +131,61 @@
 /* cards */
 
 /* catch-phrase */
-.phrase{
-  box-sizing: border-box;
+.phrase {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-color: white;
   padding: 20px;
+  margin-top: 3rem;
 }
-.phrase__content{
+.phrase__content {
   box-sizing: border-box;
   width: 480px;
   margin: 3.2rem;
 }
-.phrase__content h2{
+.phrase__content h2 {
   margin-bottom: 1rem;
 }
-.phrase__content img{
+.phrase__content img {
   width: 50px;
 }
-.phrase__icons{
+.phrase__icons {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 10px 0px;
   width: 100%;
 }
-.phrase__content button{
+.phrase__content button {
   margin-top: 20px;
 }
-.phrase__background{
+.phrase__background {
   box-sizing: border-box;
   display: flex;
-  border: 0rem solid blue;
   background-image: url(../assets/coldbrewbackground.png);
   height: 70vh;
   width: 400px;
   background-position: center;
   background-size: cover;
-  padding: 20px;
   margin: 3.2rem;
 }
-.phrase__background--image{
+.phrase__background--image {
   box-sizing: border-box;
+  position: relative;
+  border: 0.3rem solid #5bacc3;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 400px;
   height: 100%;
+  padding: 20px;
+  top: -1rem;
+  right: 1rem;
 }
-.phrase__background--image img{
+.phrase__background--image img {
   height: 280px;
 }
 /* catch-phrase */
@@ -198,7 +215,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  gap:10rem
+  gap: 10rem;
 }
 .footer__header {
   margin-top: 0rem;
