@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
 }
 
 button {
@@ -206,20 +207,43 @@ button {
   text-align: center;
   width: 90%;
 }
-
+/* the footer */
 .footer {
-  background-color: #fff0ed;
-  padding-top: 3rem;
-  padding-left: 0rem;
-  padding-bottom: 3rem;
-  width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 10rem;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 70px 40px;
+  background-color:#fff0ed ;
+  position: relative;
+
 }
-.footer__header {
-  margin-top: 0rem;
+.footer__section{
+  padding: 10px;
 }
-.footer img {
+
+.footer__section img {
   width: 3.125rem;
+}
+.footer:before,
+.footer:after {
+  content: '';
+  position: absolute;
+  opacity: 0.2;
+  background-image: url('../assets/coffee-beans-logo-and-footer.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 8rem;
+  height: 8rem;
+
+}
+
+.footer:before {
+  top:30px;
+  left: -2rem;
+}
+
+.footer:after {
+  bottom: 30px;
+  right: 0;
 }
