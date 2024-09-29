@@ -77,6 +77,17 @@ a {
   box-sizing: border-box;
 }
 
+@keyframes flash {
+  0% {
+    background-color: #393939;
+  }
+  50% {
+    background-color: #5bacc3;
+  }
+  100% {
+    background-color: #393939;
+  }
+}
 button {
   display: flex;
   justify-content: center;
@@ -97,6 +108,15 @@ button .button--feature {
   position: relative;
   top: -0.3rem;
   right: 0.3rem;
+  transition: all 0.5s ease;
+}
+button .button--feature:hover {
+  cursor: pointer;
+}
+button .button--feature:active {
+  top: 0;
+  right: 0;
+  transition: all 0.5s ease;
 }
 
 .banner {
@@ -238,8 +258,20 @@ button .button--feature {
   top: -1rem;
   right: 1rem;
 }
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .phrase__background--image img {
   height: 17.5rem;
+  transition: transform 0.5s ease-in-out;
+}
+.phrase__background--image img:hover {
+  animation: rotate360 2s linear infinite;
 }
 
 .discount {
@@ -258,6 +290,7 @@ button .button--feature {
   padding: 1.25rem;
   text-align: center;
   width: 90%;
+  animation: flash 2.5s infinite;
 }
 
 .footer {

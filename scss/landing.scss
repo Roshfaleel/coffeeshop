@@ -8,6 +8,18 @@
   @include box-sizing;
 }
 
+@keyframes flash {
+    0%{
+      background-color: $dark-color;
+    }
+    50%{
+      background-color: $primary-color;
+    }
+    100%{
+      background-color: $dark-color;
+    }
+  }
+
 button {
   @include flex-center;
   background-color: $primary-color;
@@ -17,8 +29,8 @@ button {
   font-weight: 300;
   width: 180px;
   padding: 0;
-  // padding: 20px;
   margin-top: 50px;
+
 
   .button--feature {
     border: 0.15rem solid black;
@@ -27,6 +39,18 @@ button {
     position: relative;
     top: -0.3rem;
     right: 0.3rem;
+    transition: all 0.5s ease;
+
+    &:hover{
+      cursor: pointer;
+
+    }
+
+    &:active{
+      top:0;
+      right: 0;
+      transition: all 0.5s ease;
+    }
   }
 }
 
@@ -189,8 +213,21 @@ button {
       top: -1rem;
       right: 1rem;
 
+      @keyframes rotate360 {
+        from {
+          transform: rotate(0deg);
+        }
+        to{
+          transform: rotate(360deg)
+        }
+      }
       img {
         height: 17.5rem;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+      animation: rotate360 2s linear infinite;
+        }
       }
     }
   }
@@ -203,6 +240,7 @@ button {
   padding-top: $padding-large;
   padding-bottom: $padding-large;
 }
+
 .discount-para {
   background-color: $dark-color;
   color: $highlight-color;
@@ -212,6 +250,8 @@ button {
   padding: $padding-small;
   @include text-align-center;
   width: 90%;
+  animation: flash 2.5s infinite;
+
 }
 // the footer
 .footer {
