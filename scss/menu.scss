@@ -1,0 +1,117 @@
+@use './partials/global' as *;
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+
+
+*,
+*::before,
+*::after {
+  @include box-sizing;
+}
+
+//menu banner
+.hero {
+	height: 96vh;
+	width: 100%;
+	background-image: url(../assets/coffee-circle.jpg);
+	background-position: center;
+	background-size: cover;
+	@include flex-center;
+
+	&__titlebox {
+		@include flex-center;
+		width: 18.75rem;
+		height: 12.5rem;
+		background-color: $dark-color;
+		color: $highlight-color;
+		margin: $padding-small 0;
+
+		&--border {
+			background-color: transparent;
+			border: 0.313rem solid $primary-color;
+			position: relative;
+			top: -0.938rem;
+			right: 0.938rem;
+		}
+
+	}
+}
+
+// Menu Sub
+
+.menu-sub {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $dark-color;
+	width: 100%;
+	height: 5rem;
+	padding: $padding-small;
+	color: $highlight-color;
+
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		width: 40%;
+
+		li{
+			padding-left: $padding-small;
+			padding-right: $padding-small;
+			border-left: 0.25rem solid $primary-color;
+		}
+	}
+}
+
+//Item details
+
+.item__details {
+	width: 100%;
+	background-color: $secondary-color;
+	padding: $padding-medium;
+
+	h2,h3{
+		@include text-align-center;
+		margin: 0;
+	}
+
+	h3{
+		margin-top: $padding-small;
+	}
+
+	&--flavor p{
+		@include text-align-center;
+		font-size: 1.125rem;
+		font-weight: 400;
+		color: $dark-color;
+	}
+
+	.item--price{
+		@include text-align-center;
+		color: $primary-color;
+		margin-top: $margin-top;
+	}
+
+	&--active {
+		background-color: $light-color;
+		padding: $padding-medium;
+
+		h2,h3{
+			@include text-align-center;
+			margin: 0;
+		}
+
+		h3{
+			margin-top: $padding-small;
+			margin-bottom: 0.5%;
+		}
+	}
+}
+.item__details--flavor {
+	margin-top: 0.5rem;
+	p {
+		text-align: center;
+		font-size: 18px;
+		font-weight: 400;
+		color: $neutral-color1;
+	}
+}

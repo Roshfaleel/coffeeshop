@@ -1,0 +1,75 @@
+
+@use "./variables" as *;
+@use "./mixins" as *;
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: $dark-color;
+  margin: $margin-top;
+}
+h1, h2{
+  font-size: $font-large;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: $font-medium;
+  font-weight: 300;
+}
+
+p {
+  font-size: $font-small;
+  font-weight: 400;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+.navbar {
+  @include box-sizing;
+  margin: 0;
+  height: 90px;
+  width: 100%;
+  @include flex-center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: $secondary-color;
+
+  &__logo{
+    @include flex-center;
+
+    img {
+      height: 3.125rem;
+      margin-right: .625rem;
+    }
+
+    h2{
+      margin: 0;
+    }
+  }
+
+  &__links{
+    display: flex;
+    padding-top: 1.5625rem;
+    font-size: $font-regular;
+    font-weight: 400;
+
+    ul {
+      margin: 0 15px;
+    }
+
+    li {
+      display: inline-block;
+      padding-left: 1.88rem;
+    }
+
+    #shop-link a{
+      color: $primary-color;
+    }
+  }
+}

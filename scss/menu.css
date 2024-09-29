@@ -1,9 +1,91 @@
-*,
-*::before,
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: #393939;
+  margin: 0%;
+}
+
+h1, h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2.06rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.13rem;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #393939;
+}
+
+.navbar {
+  box-sizing: border-box;
+  margin: 0;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #fff0ed;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar__logo h2 {
+  margin: 0;
+}
+
+.navbar__links {
+  display: flex;
+  padding-top: 25px;
+  font-size: 1.31rem;
+  font-weight: 400;
+}
+
+.navbar__links ul {
+  margin: 0 15px;
+}
+
+.navbar__links li {
+  display: inline-block;
+  padding-left: 1.88rem;
+}
+
+#shop-link a {
+  color: #5bacc3;
+}
+
+/* menu-banner */
+/* item */
+* {
+  box-sizing: border-box;
+}
+*::before {
+  box-sizing: border-box;
+}
 *::after {
   box-sizing: border-box;
 }
-/* menu-banner */
+
 .hero {
   height: 96vh;
   width: 100%;
@@ -22,17 +104,19 @@
   width: 18.75rem;
   height: 12.5rem;
   background-color: #393939;
-  color: white;
+  color: #FFF;
   text-align: center;
   margin: 1rem 0;
 }
+
 .hero__titlebox--border {
   background-color: transparent;
-  border: 0.25rem solid #5bacc3;
+  border: 0.313rem solid #5bacc3;
   position: relative;
   top: -0.938rem;
   right: 0.938rem;
 }
+
 .menu-sub {
   display: flex;
   justify-content: space-around;
@@ -41,8 +125,9 @@
   width: 100%;
   height: 5rem;
   padding: 1.25rem;
-  color: white;
+  color: #FFF;
 }
+
 .menu-sub__list {
   display: flex;
   justify-content: space-between;
@@ -53,11 +138,10 @@
   padding-right: 1rem;
   border-left: 0.25rem solid #5bacc3;
 }
-/* menu-banner */
-/* item */
+
 .item__details {
   width: 100%;
-  background-color: #fff0ed;
+  background-color: #FFF0ED;
   padding: 2rem;
 }
 .item__details h2 {
@@ -68,6 +152,7 @@
   text-align: center;
   margin-top: 2rem;
 }
+
 .item__details--flavor {
   margin-top: 0.5rem;
 }
@@ -77,13 +162,15 @@
   font-weight: 400;
   color: #393939;
 }
+
 .item--price {
   text-align: center;
   color: #5bacc3;
   margin-top: 0%;
 }
+
 .item__details--active {
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
   padding: 3%;
 }
 .item__details--active h2 {
@@ -94,4 +181,4 @@
   text-align: center;
   margin-top: 2%;
   margin-bottom: 0.5%;
-}
+}/*# sourceMappingURL=menu.css.map */

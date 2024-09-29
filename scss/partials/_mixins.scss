@@ -1,0 +1,17 @@
+//flex-center
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//box-sizing
+@mixin box-sizing{
+    box-sizing: border-box;
+}
+
+//aligning text center
+
+@mixin text-align-center{
+    text-align: center;
+}
